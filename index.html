@@ -74,6 +74,20 @@
 
   /* ---------- HERO ---------- */
   .hero{padding-top:88px; padding-bottom:72px;}
+  .hero-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:start;}
+  @media (max-width:820px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero-photo-wrap{
+    border:1px solid var(--line); background:var(--card); padding:14px;
+  }
+  .hero-photo-wrap img{
+    display:block; width:100%; height:auto; filter:grayscale(15%);
+    border-bottom:3px solid var(--amber);
+  }
+  .hero-photo-cap{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--slate);
+    padding-top:10px; display:flex; justify-content:space-between;
+  }
+  .hero-photo-cap b{color:var(--navy); font-weight:600;}
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
     font-size:12.5px; letter-spacing:.12em; text-transform:uppercase;
@@ -287,12 +301,20 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Customer Support &amp; CRM Specialist</div>
-    <h1>Every unanswered ticket and unsent invoice is revenue walking out the door.</h1>
-    <p class="sub">I build the support systems and HubSpot pipelines that catch it before it happens — so leads stay warm, tickets stay closed, and payments stay tracked.</p>
-    <div class="hero-ctas">
-      <a class="btn-primary" href="#work">See the work</a>
-      <a class="btn-secondary" href="#contact">Get in touch</a>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Customer Support &amp; CRM Specialist</div>
+        <h1>Every unanswered ticket and unsent invoice is revenue walking out the door.</h1>
+        <p class="sub">I build the support systems and HubSpot pipelines that catch it before it happens — so leads stay warm, tickets stay closed, and payments stay tracked.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#work">See the work</a>
+          <a class="btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="miracle-photo.jpg" alt="Miracle Essien">
+        <div class="hero-photo-cap"><b>Miracle Essien</b><span>Lagos, NG</span></div>
+      </div>
     </div>
 
     <div class="flow">
@@ -305,6 +327,7 @@
         <div class="flow-step"><div class="flow-node"></div><span>Payment received</span></div>
         <div class="flow-step"><div class="flow-node"></div><span>Report reconciled</span></div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -414,15 +437,15 @@
         <div class="k" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--slate); text-transform:uppercase; letter-spacing:.08em; margin-bottom:14px;">Certifications</div>
         <div class="cert-item">
           <span class="cert-check">✓</span>
-          <div><span class="cname">HubSpot CRM for Customer Support</span><span class="cissuer">HubSpot Academy</span></div>
+          <div><span class="cname">Inbound Certified</span><span class="cissuer">HubSpot Academy · Valid Jun 2026 – Jul 2028</span></div>
         </div>
         <div class="cert-item">
           <span class="cert-check">✓</span>
-          <div><span class="cname">Service Hub Software Certification</span><span class="cissuer">HubSpot Academy</span></div>
+          <div><span class="cname">Professional Virtual Assistance Course</span><span class="cissuer">AQskill / American Council of Training &amp; Development · June 2026</span></div>
         </div>
         <div class="cert-item">
           <span class="cert-check">✓</span>
-          <div><span class="cname">Sales Software Certification</span><span class="cissuer">HubSpot Academy</span></div>
+          <div><span class="cname">Customer Relationship Management</span><span class="cissuer">Side Hustle Internship, Cohort 6 · October 2022</span></div>
         </div>
       </div>
     </div>
