@@ -218,6 +218,13 @@
   .cert-item{
     display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--line);
   }
+  .cert-gallery{display:flex; flex-direction:column; gap:16px;}
+  .cert-card{border:1px solid var(--line); background:var(--card); overflow:hidden; text-decoration:none; display:block; transition:border-color .2s ease;}
+  a.cert-card:hover{border-color:var(--amber);}
+  .cert-card img{display:block; width:100%; height:auto; border-bottom:1px solid var(--line);}
+  .cert-card-cap{padding:12px 14px; display:flex; justify-content:space-between; align-items:baseline; gap:10px;}
+  .cert-card-cap .cname{font-weight:600; color:var(--navy); font-size:14px;}
+  .cert-card-cap .cissuer{color:var(--slate); font-size:12px; font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
   .cert-item:first-child{padding-top:0;}
   .cert-check{color:var(--green); font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:14px;}
   .cert-item div span{display:block;}
@@ -435,17 +442,19 @@
       </div>
       <div>
         <div class="k" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--slate); text-transform:uppercase; letter-spacing:.08em; margin-bottom:14px;">Certifications</div>
-        <div class="cert-item">
-          <span class="cert-check">✓</span>
-          <div><span class="cname">Inbound Certified</span><span class="cissuer">HubSpot Academy · Valid Jun 2026 – Jul 2028</span></div>
-        </div>
-        <div class="cert-item">
-          <span class="cert-check">✓</span>
-          <div><span class="cname">Professional Virtual Assistance Course</span><span class="cissuer">AQskill / American Council of Training &amp; Development · June 2026</span></div>
-        </div>
-        <div class="cert-item">
-          <span class="cert-check">✓</span>
-          <div><span class="cname">Customer Relationship Management</span><span class="cissuer">Side Hustle Internship, Cohort 6 · October 2022</span></div>
+        <div class="cert-gallery">
+          <a class="cert-card" href="https://app-eu1.hubspot.com/academy/achievements/263h3nn0/en/1/miracle-essien/inbound-certified" target="_blank" rel="noopener">
+            <img src="cert-inbound.png" alt="Inbound Certified - HubSpot Academy">
+            <div class="cert-card-cap"><span class="cname">Inbound Certified ↗</span><span class="cissuer">HubSpot · Jun 2026–Jul 2028</span></div>
+          </a>
+          <a class="cert-card" href="https://www.aqskill.org/verify/270498A224132" target="_blank" rel="noopener">
+            <img src="cert-vac.png" alt="Professional Virtual Assistance Course - AQskill">
+            <div class="cert-card-cap"><span class="cname">Professional Virtual Assistance ↗</span><span class="cissuer">AQskill · Jun 2026</span></div>
+          </a>
+          <div class="cert-card">
+            <img src="cert-crm.jpg" alt="Customer Relationship Management - Side Hustle">
+            <div class="cert-card-cap"><span class="cname">Customer Relationship Management</span><span class="cissuer">Side Hustle · Oct 2022</span></div>
+          </div>
         </div>
       </div>
     </div>
